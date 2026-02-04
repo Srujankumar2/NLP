@@ -1,0 +1,6 @@
+from nltk.stem import PorterStemmer
+stemmer = PorterStemmer()
+words = ["running", "runner", "easily", "fairness", "studies", "studying"]
+stemmed_words = [stemmer.stem(word) for word in words]
+for w, s in zip(words, stemmed_words):
+    print(w, "→", s)
