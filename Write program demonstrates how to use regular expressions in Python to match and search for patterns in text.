@@ -1,0 +1,16 @@
+import re
+text = "My email is student123@gmail.com and my backup is test_user@outlook.com"
+pattern_match = r"My"
+result_match = re.match(pattern_match, text)
+print("Match:", result_match.group() if result_match else "No match")
+pattern_search = r"\w+@\w+\.\w+"
+result_search = re.search(pattern_search, text)
+print("Search:", result_search.group())
+result_findall = re.findall(pattern_search, text)
+print("Find all:", result_findall)
+
+output 
+Match: My
+Search: student123@gmail.com
+Find all: ['student123@gmail.com', 'test_user@outlook.com']
+
